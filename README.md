@@ -7,7 +7,9 @@ Raspberry Pi headless setup guide
 ```sh
 dd bs=4M if=image.img of=/dev/sdX status=progress conv=fsync
 ```
-3. Setup wifi: https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet
+3. Shh is enabled by default
+4. Setup wifi: https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet
+5. Connect via ssh: user: ubuntu, password: ubuntu
 
 # Raspbian (32 bit)
 
@@ -18,6 +20,7 @@ dd bs=4M if=image.img of=/dev/sdX status=progress conv=fsync
 ```
 3. Setup shh: https://www.raspberrypi.org/documentation/remote-access/ssh/README.md
 4. Setup wifi: https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+5. Connect via ssh: user: pi, password: raspberry
 
 # Alternative connections
 
@@ -27,6 +30,6 @@ dd bs=4M if=image.img of=/dev/sdX status=progress conv=fsync
 - Go the edit connection setting.
 - Navigate to ipv4 option. Select method : shared to other computer.
 - Then open command prompt and type command >"cat /var/lib/misc/dnsmasq.leases". You will get raspberry pi Ip from that.
-- then open command prompt and type: ssh pi@"ip of raspberry pi"
+- then connect via ssh
 
 Source: https://raspberrypi.stackexchange.com/questions/30144/connect-raspberry-pi-to-pc-ubuntu-with-ethernet
